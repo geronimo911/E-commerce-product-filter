@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexStore | Ultra Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mesh-gradient"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">NEX<span>STORE</span></div>
+            <div class="nav-actions">
+                <button id="themeToggle" class="icon-btn">🌓</button>
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-icon">👜</span>
+                    <span id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="app-container">
+        <aside class="sidebar">
+            <div class="filter-card">
+                <h3>Filters</h3>
+                <div class="input-group">
+                    <label>Search</label>
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                </div>
+                <div class="input-group">
+                    <label>Category</label>
+                    <select id="categorySelect">
+                        <option value="all">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="lifestyle">Lifestyle</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Budget: <span id="priceVal">₹1,50,000</span></label>
+                    <input type="range" id="priceRange" min="0" max="150000" step="1000" value="150000">
+                </div>
+                <button id="resetBtn" class="secondary-btn">Reset Filters</button>
+            </div>
+        </aside>
+
+        <section class="content">
+            <div id="productGrid" class="product-grid"></div>
+            <div id="noResults" class="hidden-state">
+                <p>No products found in this range.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="cartDrawer" class="cart-drawer">
+        <div class="drawer-header">
+            <h2>Your Bag</h2>
+            <button id="closeCart">✕</button>
+        </div>
+        <div id="cartItems" class="cart-items-list"></div>
+        <div class="drawer-footer">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Added to cart!</div>
+    <script src="script.js"></script>
+</body>
+</html>
